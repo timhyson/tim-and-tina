@@ -17,7 +17,8 @@ export class AppComponent {
     this.menuItems = [
           { name: "Our Story", route: "/our-story" },
           { name: "When & where", route: "/when-where" },
-          { name: "Gallery", route: "/gallery" }
+          { name: "Gallery", route: "/gallery" },
+          { name: "Guestbook", route: "/guestbook" },
       ];
   }
 
