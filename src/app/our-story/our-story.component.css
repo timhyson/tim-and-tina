@@ -2,6 +2,14 @@
   height: 500px;
 }
 
+.parallax img {
+  width: 100%;
+}
+
+.parallax-overlay {
+  background: rgba(70, 72, 82, 0.7);
+}
+
 .h100 {
   height: 100%;
 }
@@ -16,12 +24,35 @@
 }
 
 .overlay,
-.parallax-text {
-  /*font-size: 80px;*/
+.parallax-text,
+.schedule-title {
   font-family: 'Lato', sans-serif;
   letter-spacing: .11em;
+  line-height: 1em;
   font-size: 2.25em;
   text-rendering: optimizeLegibility;
+  margin: 20px auto;
+}
+
+.parallax-sub-text,
+.schedule-sub-title,
+.contact-details {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .11em;
+  width: 100%;
+  font-size: 1.5em;
+  text-rendering: optimizeLegibility;
+  margin: 20px auto;
+}
+
+.parallax-sub-text,
+.schedule-sub-title,
+a.contact {
+  color: #c8b274;
+}
+
+.contact-details {
+  color: #fff;
 }
 
 @media (min-width: 993px) {
@@ -29,12 +60,25 @@
     height: 900px;
   }
   .overlay,
-  .parallax-text {
+  .parallax-text,
+  .schedule-title {
     /*font-size: 80px;*/
     font-family: 'Lato', sans-serif;
     letter-spacing: .11em;
-    font-size: 7em;
+    /* font-size: 7em; */
+    font-size: 4.6em;
     text-rendering: optimizeLegibility;
+  }
+  .parallax-sub-text,
+  .schedule-sub-title,
+  .contact-details {
+    /*font-size: 80px;*/
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .11em;
+    width: 100%;
+    /* font-size: 7em; */
+    text-rendering: optimizeLegibility;
+    color: #c8b274;
   }
   .header {
     font-family: 'Lato', sans-serif;
@@ -60,6 +104,10 @@
 }
 
 p {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+
+.schedule {
+  width: 80%;
 }

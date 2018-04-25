@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { MaterializeModule } from 'angular2-materialize';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { DisqusModule } from "ngx-disqus";
 
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
 import { GalleryComponent } from './gallery/gallery.component';
-import { GuestbookComponent } from './guestbook/guestbook.component';
 import { OurStoryComponent } from './our-story/our-story.component';
 import { WhenWhereComponent } from './when-where/when-where.component';
+import { GiftsComponent } from './gifts/gifts.component';
+
+const appRoutes: Routes = [
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'our-story',  component: OurStoryComponent },
+  { path: 'when-where', component: WhenWhereComponent },
+  { path: '',
+    redirectTo: '/our-story',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -20,22 +26,14 @@ import { WhenWhereComponent } from './when-where/when-where.component';
     OurStoryComponent,
     WhenWhereComponent,
     GalleryComponent,
-    GuestbookComponent
+    GiftsComponent
   ],
   imports: [
-    BrowserModule,,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    DisqusModule.forRoot('timandtina'),
+    BrowserModule,
     MaterializeModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: 'our-story', pathMatch: 'full' },
-      { path: 'our-story', component: OurStoryComponent },
-      { path: 'when-where', component: WhenWhereComponent },
-      { path: 'gallery', component: GalleryComponent },
-      { path: 'guestbook', component: GuestbookComponent },
-    ])
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

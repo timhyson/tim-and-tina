@@ -7,8 +7,8 @@ import { Component, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  wedding = { name: 'our wedding' };
-  menuItems: MenuItem[];
+  wedding = { name: 'tim + tina' };
+  menuItems: IMenuItem[];
 
   constructor() {
     this.sidenavActions = new EventEmitter<any>();
@@ -16,9 +16,8 @@ export class AppComponent {
 
     this.menuItems = [
           { name: "Our Story", route: "/our-story" },
-          { name: "When & where", route: "/when-where" },
+          // { name: "When & where", route: "/when-where" },
           { name: "Gallery", route: "/gallery" },
-          { name: "Guestbook", route: "/guestbook" },
       ];
   }
 
@@ -30,7 +29,7 @@ export class AppComponent {
   sidenavParams: any[];
 }
 
-export interface MenuItem {
+export interface IMenuItem {
 
   name: string;
   route: string;

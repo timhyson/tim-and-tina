@@ -1,12 +1,36 @@
-.nav-wrapper {
-  padding-left: 6em;
-  padding-right: 6em;
+i.material-icons.nav-icon {
+  color: #c8b274;
+}
+
+@media (min-width: 993px) {
+  .nav-wrapper {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
 }
 
 .page-title {
-  font-size: 17px;
+  font-size: 1.3em;
   font-family: 'Lato', sans-serif;
-  letter-spacing: .11em;
   line-height: 1em;
   text-rendering: optimizeLegibility;
+  text-transform: none;
+  font-weight: 500;  /* This isn't working */
+  font-style: normal;
+  color: #c8b274;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 425px) {
+  .page-title {
+    letter-spacing: .35em;
+  }
+}
+
+@media (min-width: 993px) {
+  .page-title {
+    font-size: 1.5em;
+  }
 }

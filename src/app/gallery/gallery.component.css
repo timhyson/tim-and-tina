@@ -1,0 +1,11 @@
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .11em;
+  line-height: 1em;
+  text-rendering: optimizeLegibility;
+  margin: 20px auto;
+}
+
+iframe, object, embed {
+  max-width: 100%;
+}
