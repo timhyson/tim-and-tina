@@ -1,0 +1,72 @@
+.parallax-container {
+  height: 500px;
+}
+
+.parallax img {
+  width: 100%;
+}
+
+.parallax-overlay {
+  background: rgba(70, 72, 82, 0.7);
+}
+
+.h100 {
+  height: 100%;
+}
+
+.overlay {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .11em;
+  line-height: 1em;
+  font-size: 2.25em;
+  text-rendering: optimizeLegibility;
+  margin: 20px auto;
+}
+
+.parallax-sub-text {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .11em;
+  width: 100%;
+  font-size: 1.5em;
+  text-rendering: optimizeLegibility;
+  margin: 20px auto;
+  color: #c8b274;
+}
+
+@media (min-width: 993px) {
+  .parallax-container {
+    height: 900px;
+  }
+  .overlay {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .11em;
+    font-size: 4.6em;
+    text-rendering: optimizeLegibility;
+  }
+  .parallax-sub-text,
+  .story-header {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .11em;
+    width: 100%;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.overlay {
+  width: 100%;
+}
+
+.story-header {
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
+  color: #c8b274;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #c8b274;
+}

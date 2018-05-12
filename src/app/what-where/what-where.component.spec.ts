@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhenWhereComponent } from './when-where.component';
+import { WhatWhereComponent } from './what-where.component';
 
-describe('WhenWhereComponent', () => {
-  let component: WhenWhereComponent;
-  let fixture: ComponentFixture<WhenWhereComponent>;
+describe('WhatWhereComponent', () => {
+  let component: WhatWhereComponent;
+  let fixture: ComponentFixture<WhatWhereComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhenWhereComponent ]
+      declarations: [ WhatWhereComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhenWhereComponent);
+    fixture = TestBed.createComponent(WhatWhereComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
