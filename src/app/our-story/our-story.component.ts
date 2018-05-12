@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscription } from 'rxjs/Rx';
+import { Observable, Subscription, interval as observableInterval } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-our-story',
@@ -41,10 +42,10 @@ export class OurStoryComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.date = new Date(this.dateString);
-    this.counter$ = Observable.interval(1000).map((x) => {
+    this.counter$ = observableInterval(1000).pipe(map((x) => {
       this.diff = Math.floor((this.date.getTime() - new Date().getTime()) / 1000);
       return x;
-    });
+    }));
 
     this.subscription = this.counter$.subscribe((x) => this.message = this.getInterval(this.diff));
   }
