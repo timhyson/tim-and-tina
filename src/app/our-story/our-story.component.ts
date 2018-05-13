@@ -10,7 +10,8 @@ import { map } from 'rxjs/operators';
 export class OurStoryComponent implements OnInit, OnDestroy {
 
   private date: Date;
-  private dateString = 'May 31, 2018 15:30:00Z+3:00';
+  // Hardcode date: 31st May 2018 at 15:30 in Cyprus (UTC +3hrs)
+  private dateString = '2018-05-31T15:30:00+03:00';
   private diff: number;
   private counter$: Observable<number>;
   private subscription: Subscription;
