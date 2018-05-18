@@ -1,4 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   sidenavActions: EventEmitter<any>;
   sidenavParams: any[];
 
-  constructor() {
+  constructor(private router: Router) {
     this.sidenavActions = new EventEmitter<any>();
     this.sidenavParams = [];
 
@@ -22,6 +23,13 @@ export class AppComponent {
       { name: 'What\'s where', route: '/what-where' },
       { name: 'Gallery', route: '/gallery' },
     ];
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        (<any>window).ga('set', 'page', event.urlAfterRedirects);
+        (<any>window).ga('send', 'pageview');
+      }
+    });
   }
 
   close() {
