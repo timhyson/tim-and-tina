@@ -12,4 +12,11 @@ export class GiftsComponent implements OnInit {
   ngOnInit() {
   }
 
+  public sendEvent() {
+    (<any>window).gtag('event', 'click', {
+      'event_category': 'guestList',
+      'event_label': 'guestList',
+      'value': 0
+    });
+  }
 }

@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
-import { environment } from './../environments/environment';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GiftsComponent } from './gifts/gifts.component';
 import { OurStoryComponent } from './our-story/our-story.component';
 import { WhatWhereComponent } from './what-where/what-where.component';
-import { GiftsComponent } from './gifts/gifts.component';
 
 const appRoutes: Routes = [
   { path: 'gallery', component: GalleryComponent },
+  { path: 'gifts', component: GiftsComponent },
   { path: 'our-story',  component: OurStoryComponent },
   { path: 'what-where', component: WhatWhereComponent },
   { path: '',
