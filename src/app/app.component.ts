@@ -21,13 +21,15 @@ export class AppComponent {
     this.menuItems = [
       { name: 'Our Story', route: '/our-story' },
       { name: 'What\'s where', route: '/what-where' },
-      { name: 'Gallery', route: '/gallery' },
+      { name: 'Gallery', route: '/gallery' }
     ];
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        (<any>window).ga('set', 'page', event.urlAfterRedirects);
-        (<any>window).ga('send', 'pageview');
+        (<any>window).gtag('config', 'UA-119158500-1', {
+          'page_title' : 'TimAndTina',
+          'page_path': event.urlAfterRedirects
+        })
       }
     });
   }
