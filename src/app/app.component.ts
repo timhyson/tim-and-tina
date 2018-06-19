@@ -21,8 +21,7 @@ export class AppComponent {
     this.menuItems = [
       { name: 'Our Story', route: '/our-story' },
       { name: 'What\'s where', route: '/what-where' },
-      { name: 'Gallery', route: '/gallery' },
-      { name: 'Gifts', route: '/gifts' }
+      { name: 'Gallery', route: '/gallery' }
     ];
 
     this.router.events.subscribe(event => {
